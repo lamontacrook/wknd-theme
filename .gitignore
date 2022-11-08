@@ -5,3 +5,4 @@ node_modules/
 npm-debug.log
 install.js
 dist/
+.env

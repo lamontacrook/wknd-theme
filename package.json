@@ -12,7 +12,7 @@
   "scripts": {
     "build": "webpack --config ./webpack.prod.js",
     "live-theme": "http-server -c-1 ./dist --cors",
-    "watch": "webpack-dev-server --config ./webpack.prod.js --env writeToDisk & chokidar -c \"clientlib\" ./dist & aemsync -w ../ui.apps/src/main/content",
+    "watch": "webpack-dev-server --config ./webpack.prod.js --env writeToDisk & chokidar -c \"theme\" ./dist",
     "proxy": "aem-site-theme-builder live",
     "live": "npm-run-all -p watch proxy"
   },
