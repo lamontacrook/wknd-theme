@@ -19,9 +19,12 @@ const resolve = {
 module.exports = {
     resolve: resolve,
     entry: {
+        /** The key should be named theme **/
+        /** to match the name AEM is expecting for the JS file **/
         theme: SOURCE_ROOT + '/site/main.js'
     },
     output: {
+        /** Based on the key above this will be theme.js **/
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
@@ -100,10 +103,12 @@ module.exports = {
             extensions: ['js', 'ts', 'tsx']
         }),
         new MiniCssExtractPlugin({
+            /** The *.css filename with be theme.css **/
             filename: '[name].css'
         }),
         new CopyWebpackPlugin({
             patterns: [
+                /** Resources will be moved to a folder name theme rather than clientlibs **/
                 { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './theme' }
             ]
         })

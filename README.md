@@ -27,3 +27,5 @@ Clone the repository and add a new file named `.env` to the root.  This will tel
 
     # AEM proxy port
     AEM_PROXY_PORT=7000
+
+After creating the `.env` file run `npm i` from the terminal.
